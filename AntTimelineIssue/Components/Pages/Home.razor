@@ -4,4 +4,13 @@
 
 <h1>Hello, world!</h1>
 
-Welcome to your new app.
+
+<div>
+  <Timeline>
+    @foreach (var num in Enumerable.Range(1, 10))
+    {
+      const string col = "red";
+      <TimelineItem Color="@col">Item @num</TimelineItem>
+    }
+  </Timeline>
+</div>
