@@ -3,8 +3,10 @@ using AntTimelineIssue.Components;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+builder.Services
+  .AddAntDesign()
+  .AddRazorComponents()
+  .AddInteractiveServerComponents();
 
 var app = builder.Build();
 

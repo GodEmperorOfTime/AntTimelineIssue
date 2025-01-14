@@ -14,8 +14,9 @@
 </head>
 
 <body>
-    <Routes />
-    <script src="_framework/blazor.web.js"></script>
+  <Routes @rendermode="RenderMode.InteractiveServer" />
+  <AntContainer @rendermode="RenderMode.InteractiveServer" />
+  <script src="_framework/blazor.web.js"></script>
 </body>
 
 </html>
