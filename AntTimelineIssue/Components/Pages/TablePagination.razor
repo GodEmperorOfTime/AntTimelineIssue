@@ -1,0 +1,18 @@
+﻿@page "/tablepagination"
+
+<Table TItem="RowModel" DataSource="@rows" PageSize="@pageSize" HidePagination="@hidePagination">
+   <PropertyColumn Property="c => c.Nr" />
+</Table>
+
+@code {
+  int pageSize = 3;
+  bool hidePagination = true;
+  List<RowModel> rows = Enumerable
+    .Range(1, 12)
+    .Select(nr => new RowModel() { Nr = nr })
+    .ToList();
+
+  class RowModel {
+    public required int Nr { get; set; }
+  }
+}
