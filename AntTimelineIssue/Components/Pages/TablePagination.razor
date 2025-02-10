@@ -1,11 +1,23 @@
 ﻿@page "/tablepagination"
 
-<Table TItem="RowModel" DataSource="@rows" PageSize="@pageSize" HidePagination="@hidePagination">
+<Table TItem="RowModel" DataSource="@rows">
    <PropertyColumn Property="c => c.Nr" />
 </Table>
 
+<Table TItem="RowModel" DataSource="@rows" PageSize="@pageSize">
+  <PropertyColumn Property="c => c.Nr" />
+</Table>
+
+<Table TItem="RowModel" DataSource="@rows" HidePagination="@hidePagination">
+  <PropertyColumn Property="c => c.Nr" />
+</Table>
+
+<Table TItem="RowModel" DataSource="@rows" PageSize="@pageSize" HidePagination="@hidePagination">
+  <PropertyColumn Property="c => c.Nr" />
+</Table>
+
 @code {
-  int pageSize = 3;
+  int pageSize = 10;
   bool hidePagination = true;
   List<RowModel> rows = Enumerable
     .Range(1, 12)
