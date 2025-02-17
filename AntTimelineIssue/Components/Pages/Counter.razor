@@ -9,6 +9,8 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
+<Button OnClick="ThrowExAsync">Throw Ex</Button>
+
 @code {
     private int currentCount = 0;
 
@@ -16,4 +18,9 @@
     {
         currentCount++;
     }
+
+  Task ThrowExAsync()
+  {
+    throw new Exception("Ex");
+  }
 }
