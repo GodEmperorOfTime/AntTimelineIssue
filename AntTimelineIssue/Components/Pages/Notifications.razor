@@ -1,0 +1,14 @@
+﻿@page "/Notifications"
+@inject NotificationService _notification
+
+<h3>Notifications</h3>
+
+<Button OnClick="SayHiAsync">Say Hi!</Button>
+
+@code {
+  Task SayHiAsync()
+  {
+    _notification.Config(new NotificationGlobalConfig() { Placement = NotificationPlacement.BottomLeft, Top = 70 });
+    return _notification.Open(new NotificationConfig() { Message = "Hi!" });
+  }
+}
