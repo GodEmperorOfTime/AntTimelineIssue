@@ -1,0 +1,22 @@
+﻿@page "/search-issue"
+<h3>Search Issue</h3>
+
+<p>
+   <Search Placeholder="..." OnSearch="Search" />
+</p>
+
+<p>
+  <strong>Search text:</strong>
+  <span>@_searchText</span>
+</p>
+
+
+@code {
+
+  string? _searchText = null;
+
+  void Search(string searchText)
+  {
+    _searchText = searchText;
+  }
+}
